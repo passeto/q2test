@@ -7,9 +7,9 @@ Imagens no DESKTOP:.
 </p>
 
 <p align="center">
-  <img src="assets/images/DESKTOP-1.png" width="150"/>
-  <img src="assets/images/desktop-2.png" width="150"/>
-  <img src="assets/images/desktop-3.png" width="150"/>
+  <img src="assets/DESKTOP-1.png" width="150"/>
+  <img src="assets/desktop-2.png" width="150"/>
+  <img src="assets/desktop-3.png" width="150"/>
 
 </p>
 
@@ -18,9 +18,9 @@ Imagens no MOBILE:.
 </p>
 
 <p align="center">
-  <img src="assets/images/mobile-1.png" width="150"/>
-  <img src="assets/images/mobile-2.png" width="150"/>
-  <img src="assets/images/mobile-3.png" width="150"/>
+  <img src="assets/mobile-1.png" width="150"/>
+  <img src="assets/mobile-2.png" width="150"/>
+  <img src="assets/mobile-3.png" width="150"/>
 </p>
 
 <!-- What is: -->
