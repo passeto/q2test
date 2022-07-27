@@ -20,9 +20,8 @@ export function AuthProvider({ children }) {
 
   async function validateSession(data) {
     setError(false)
-    console.log('data-logando', data)
     Cookies.set('token', data)
-    console.log('dentro protect', data)
+
 
     api.defaults.headers.authorization = `Bearer ${data}`
     const token = Cookies.get('token')
@@ -43,7 +42,6 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     // eslint-disable-next-line wrap-iife
     (async function () {
-      console.log('useeffect', Cookies.get('token'))
       if (Cookies.get('token')) {
         const token = Cookies.get('token')
         await validateSession(token)
@@ -106,27 +104,6 @@ export function AuthProvider({ children }) {
   )
 }
 
-/*export function ProtectRoute(Component) {
-  return () => {
-    const { loading } = useAuth()
-    const inBeatTime = !!Cookies.get('token')
-    const token = Cookies.get('token')
-    console.log('token', token)
-    api.defaults.headers.authorization = `Bearer ${token}`
-    useEffect(async () => {
-        if (!inBeatTime) {
-            Router.push({
-                pathname: '/entrar',
-              })
-        }
-        Router.push({
-            pathname: '/inicio',
-          })
-      }, [loading])
-    return (<Component {...arguments} />)
-  }
-}*/
-
 export function ProtectRoute(Component) {
   return () => {
     const { loading, validateSession } = useAuth()
@@ -141,7 +118,6 @@ export function ProtectRoute(Component) {
           Cookies.remove('token')
         }
         const data = Cookies.get('token')
-        console.log('Cookies.get', Cookies.get('token'))
         api.defaults.headers.authorization = `Bearer ${data}`
         validateSession(data)
       }
