@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import ThemeProviderLayout from '../providers/theme/index'
 import styles from '../styles/Home.module.css'
+import { Button } from '@mui/material'
 
 export default function Home() {
   return (
+    <ThemeProviderLayout>
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -63,7 +66,9 @@ export default function Home() {
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
+        <Button variant="contained">aushaushuahsuas</Button>
       </footer>
     </div>
+    </ThemeProviderLayout>
   )
 }

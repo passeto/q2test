@@ -1,0 +1,421 @@
+@import '../lib/variables.module';
+
+%typeText {
+  border: 0 none;
+  background-color: transparent;
+  border-bottom: 1px solid $gray__line;
+  padding-bottom: 6px;
+  outline: 0 none;
+  font-weight: 400;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 16px;
+  &::-webkit-input-placeholder {
+    color: $black__default;
+  }
+  &:-ms-input-placeholder {
+    color: $black__default;
+  }
+  &::placeholder {
+    color: $black__default;
+  }
+}
+.form__container {
+  input[type=text],
+  input[type=number],
+  input[type=password],
+  textarea {
+    @extend %typeText;
+  }
+  select {
+    @extend %typeText;
+  }
+  textarea {
+    resize: none;
+    border: 0 none;
+    line-height: 25px;
+    max-height: 100px;
+  }
+
+  span {
+    position: relative;
+    top: 42px;
+    font-size: 10px;
+    color: red;
+    left: 2px;
+  }
+  span + input[type=text] {
+    border-color: red;
+    position: relative;
+    top: -5px;
+  }
+}
+.form__containerEdit {
+  textarea {
+    min-height: 300px;
+    max-height: 300px;
+  }
+}
+.form__reset {
+  margin-bottom: 30px;
+  input[type=text] {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  span {
+    top: 0;
+    color: #404040;
+  }
+}
+
+.form_login {
+  @extend .form__container;
+  input[type=text] {
+    color: $white__default;
+    border-bottom-color: $white__default;
+    &::-webkit-input-placeholder {
+      color: $white__default;
+    }
+    &:-ms-input-placeholder {
+      color: $white__default;
+    }
+    &::placeholder {
+      color: $white__default;
+    }
+  }
+  input[type=password] {
+    color: $white__default;
+    border-bottom-color: $white__default;
+    &::-webkit-input-placeholder {
+      color: $white__default;
+    }
+    &:-ms-input-placeholder {
+      color: $white__default;
+    }
+    &::placeholder {
+      color: $white__default;
+    }
+  }
+  .form_mail {
+    text-transform: lowercase;
+  }
+  .form_pass {
+    text-transform: none;
+  }
+}
+.form__selectedJobs {
+  overflow: auto;
+  margin-bottom: 90px;
+  margin-top: 100px;
+  height: 300px;
+  div {
+    margin-bottom: 10px;
+  }
+  .form__stepWarning {
+    margin-top: 50px
+  }
+}
+.form__subTitleStep {
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.form__LineFull {
+  width: 100%;
+  text-transform: lowercase;
+}
+.form__LineFullMarged {
+  width: 100%;
+  margin-bottom: 20px;
+  input[type=text] {
+    text-transform: lowercase;
+  }
+}
+.password__show {
+  display: flex;
+  align-items: center;
+  margin-top: -15px;
+  >p {
+    font-size: .7em;
+    margin-left: 5px;
+  }
+}
+.form__LineHalf{
+  width: 100%;
+  .form__LineToLeft {
+    float: left;
+    margin-right: 10%;
+    width: 45%;
+  }
+  .form__LineToRight {
+    float: left;
+    width: 45%;
+  }
+}
+.form__LineSemiFull {
+  width: 100%;
+  .form__LineToLeft {
+    float: left;
+    margin-right: 5%;
+    width: 75%;
+  }
+  .form__LineToRight {
+    float: left;
+    width: 20%;
+    margin-left: 0;
+    position: relative;
+  }
+  .form__LineToLeftInvert {
+    float: left;
+    width: 75%;
+  }
+  .form__LineToRightInvert {
+    margin-right: 5%;
+    float: left;
+    width: 20%;
+    position: relative;
+  }
+}
+.form__title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.form__drywall {
+  float: left;
+  width: 40%;
+}
+.form__dry {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.form__specialCheckbox {
+  overflow: auto;
+  margin-bottom: 90px;
+  margin-top: 30px;
+  height: 400px;
+  
+  .form__containerLabelFirstJob {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid $gray__line;
+    height: 70px;
+    width: 100%;
+    font-size: 14px;
+    float: left;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  .form__containerLabelFirstJobChecked {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid $gray__line;
+    height: 70px;
+    width: 100%;
+    font-size: 14px;
+    float: left;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: $blue__markup;
+    color: $white__default;
+    border: 0 none;
+  }
+  .form__specialCheckboxItem {
+    float: left;
+    margin-right: 10px;
+    width: 20%;
+    margin-bottom: 30px;
+  }
+  .form__false {
+    border: 0 none;
+  }
+  .form__true {
+    background-color: $blue__markup;
+    color: $white__default;
+    border: 0 none;
+  }
+}
+.form__sendForgot {
+  margin: 10px auto 0 auto;
+  width: 120px;
+}
+.form__decision {
+  width: 160px;
+  margin: 0 auto;
+  display: flex;
+  padding-bottom: 20px;
+}
+.form__sendForgotEmail {
+  margin: 10px auto 0 -9px;
+  width: 120px;
+  button {
+    margin-top: 20px;
+  }
+}
+.form__emailResponse {
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+  padding-bottom: 20px;
+  strong {
+    font-size: 20px;
+  }
+}
+.resetPassword {
+  overflow: hidden;
+  padding-bottom: 30px;
+  label{
+    float: left;
+    width: 200px;
+    text-align: left;
+    padding-right: 10px;
+    padding-top: 5px;
+  }
+  .form__LineFull {
+    position: relative;
+    height: 51px;
+  }
+  section {
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .form__inputResetPass {
+    border: 1px solid #e5e5e5;
+    padding: 5px;
+    font-size: 16px;
+    width: -webkit-fill-available;
+    float: left;
+  }
+  .form__inputChangeEmail {
+    border: 1px solid #e5e5e5;
+    padding: 5px;
+    font-size: 16px;
+    width: -webkit-fill-available;
+    float: left;
+    text-transform: lowercase;
+  }
+  .form__LineFull {
+    span {
+      position: absolute;
+      top: 28px;
+      font-size: 12px;
+      color: red;
+      left: 43%;
+    }
+  }
+  .form__UpdatePass {
+    margin: 10px auto 0 auto;
+    width: 200px;
+    button {
+      margin-top: 30px;
+      width: 200px;
+    }
+  }
+}
+
+.form__titleSuccessSended {
+  text-align: center;
+}
+.form__titleForgot {
+  color: #41C0F0;
+  font-size: 25px;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form__subTitleForgot {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.formLabelForgot {
+  font-size: 16px;
+  margin-right: 10px;
+}
+.formLabelForgotEmail {
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.form__contentInput {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.forgotFormEmail {
+  position: relative;
+  width: 100%;
+  span {
+    position: absolute;
+    color: red;
+    top: 32px;
+  }
+  section {
+    text-align: center;
+  }
+}
+.form__inputForgot {
+  border: 1px solid #e5e5e5;
+  padding: 5px;
+  font-size: 16px;
+  width: 70%;
+}
+.form__inputForgotEmail {
+  border: 1px solid #e5e5e5;
+  padding: 5px;
+  font-size: 16px;
+  width: 75%;
+  text-transform: lowercase;
+}
+.form__forgot {
+  width: 230px;
+  margin: 20px auto 0 auto;
+  span {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  button {
+    color: #fff
+  }
+}
+
+@media (max-width: $breakpoint-desktop) {
+  .form__specialCheckbox {
+    .form__specialCheckboxItem {
+      float: left;
+      margin-right: 20px;
+      width: 20%;
+      margin-bottom: 30px;
+    }
+  }
+  .form__LineSemiFull {
+    .form__LineToRight {
+      button {
+        width: 98%;
+        top: 27px;
+      }
+    }
+  }
+}
+
+.isSocialAuthMessage {
+  color: red;
+  margin-top: 10px;
+}

@@ -1,0 +1,274 @@
+@import "../lib/variables.module";
+
+%button {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  outline: 0 none;
+  border: 0 none;
+  box-shadow: 0px 12px 25px #00000029;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0px 10px 5px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.button__action {
+  @extend %button;
+  background-color: $blue__area;
+  min-width: 160px;
+  color: $white__default;
+  font-size: 20px;
+  float: right;
+}
+
+.button__actonDisabled {
+  @extend .button__action;
+  background-color: #cbcbcb;
+}
+
+.button__onlyIcon {
+  @extend %button;
+  background-color: $blue__area;
+  color: $white__default;
+  height: 25px;
+  font-size: 20px;
+  right: 0;
+  top: -5px;
+  position: absolute;
+}
+
+.button__actionCentered {
+  @extend %button;
+  background-color: $blue__area;
+  min-width: 260px;
+  color: $white__default;
+  font-size: 20px;
+  margin: 0 auto;
+  clear: both;
+}
+
+.button__delete {
+  @extend %button;
+  background-color: #f04141;
+  min-width: 120px;
+  color: $white__default;
+  font-size: 16px;
+  float: right;
+  height: 40px;
+}
+
+.button__confirm {
+  @extend .button__delete;
+  background-color: #357a38;
+}
+.button__confirmDisabled {
+  @extend .button__delete;
+  background-color: #cbcbcb;
+}
+
+.button__actionGreen {
+  @extend %button;
+  background-color: $green;
+  min-width: 160px;
+  color: blue__area;
+  font-size: 20px;
+  width: 100%;
+}
+
+.button__actionDelete {
+  @extend %button;
+  background-color: $red;
+  min-width: 160px;
+  color: $white__default;
+  font-size: 20px;
+}
+
+.button__actionGreenBordered {
+  @extend %button;
+  background-color: $white__default;
+  min-width: 160px;
+  color: $green;
+  border: 2px solid $green;
+  font-size: 20px;
+  width: 100%;
+}
+
+.button__actionGreenBorderedWithHover {
+  @extend %button;
+  background-color: $white__default;
+  min-width: 160px;
+  color: $green;
+  border: 2px solid $green;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.333s ease;
+  &:hover {
+    background-color: $green;
+    color: $white__default;
+  }
+}
+
+.button__actionGreenFill {
+  @extend %button;
+  background-color: $green;
+  min-width: 160px;
+  color: $white__default;
+  font-size: 20px;
+  width: 100%;
+}
+
+.button__actionGreenContextBlack {
+  @extend %button;
+  background-color: $green;
+  min-width: 160px;
+  font-size: 15px;
+  width: 80%;
+  margin: 0 auto
+}
+
+.button__actionBlueFill {
+  @extend %button;
+  background-color: $blue__area;
+  min-width: 160px;
+  color: $white__default;
+  font-size: 20px;
+  width: 100%;
+  box-shadow: none
+}
+
+.button__actionTypeText {
+  @extend %button;
+  background-color: transparent;
+  min-width: 160px;
+  color: #35BFEE;
+  font-size: 20px;
+  width: 100%;
+  box-shadow: none;
+  &:hover {
+    border: 1px solid #35BFEE;
+  }
+}
+
+.button__actionBlueFillSmall {
+  @extend %button;
+  background-color: $blue__area;
+  min-width: 70px;
+  color: #fff;
+  font-size: 15px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.button__add {
+  @extend %button;
+  color: $blue__area;
+  min-width: 160px;
+  font-size: 20px;
+  box-shadow: inherit;
+  background-color: $white__default;
+  border: 3px solid $blue__area;
+  padding: 0 20px;
+}
+
+.button__addMedium {
+  @extend %button;
+  color: $blue__area;
+  min-width: 200px;
+  font-size: 16px;
+  box-shadow: inherit;
+  background-color: $white__default;
+  border: 3px solid $blue__area;
+  padding: 0 5px;
+  height: 40px;
+  float: left;
+}
+
+.button__addTiny {
+  @extend %button;
+  color: $blue__area;
+  min-width: 65px;
+  font-size: 12px;
+  box-shadow: inherit;
+  background-color: $white__default;
+  border: 3px solid $blue__area;
+  padding: 0 5px;
+  float: right;
+  height: 30px;
+}
+
+.button__addSmall {
+  @extend %button;
+  color: $black__default;
+  max-width: 40%;
+  font-size: 12px;
+  box-shadow: inherit;
+  background-color: $white__default;
+  border: 2px solid $black__default;
+  padding: 0 10px;
+  border-radius: 10px;
+  height: 35px;
+  float: right;
+  svg {
+    font-size: 17px;
+    color: $black__default;
+    margin-right: 5px;
+  }
+}
+
+.button__rollBack {
+  @extend %button;
+  color: $blue__area;
+  min-width: 50px;
+  font-size: 12px;
+  box-shadow: inherit;
+  background-color: $white__default;
+  border: 2px solid $blue__area;
+  padding: 0 20px;
+  float: left;
+}
+
+.button__goHome {
+  @extend %button;
+  background-color: $blue__area;
+  min-width: 160px;
+  color: $white__default;
+  font-size: 20px;
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.button__upLoad {
+  @extend %button;
+  min-width: 160px;
+  font-size: 16px;
+  box-shadow: inherit;
+  background-color: $gray__markup;
+  border: 3px solid $gray__light;
+  padding: 0 20px;
+  color: #404040;
+  display: inline-flex;
+
+  svg {
+    margin-right: 10px;
+    color: $blue__area;
+  }
+}
+
+.button__withIcon {
+  @extend %button;
+  color: $white__default;
+  min-width: 160px;
+  font-size: 16px;
+  box-shadow: inherit;
+  background-color: $blue__area;
+  border: 3px solid $blue__area;
+  padding: 0 20px;
+  margin: 0 auto;
+  svg {
+    margin-right: 10px;
+    color: $white__default;
+  }
+}

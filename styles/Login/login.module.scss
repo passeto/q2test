@@ -1,0 +1,272 @@
+@import "../lib/variables.module";
+.login__container {
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "login__wrapperLeft"
+    "login__wrapperRight";
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue__area;
+  header {
+    grid-area: header;
+    display: flex;
+    @media (max-height: 350px) {
+      display: none;
+    }
+  }
+  .login__wrapperLeft {
+    width: 100%;
+    grid-area: login__wrapperLeft;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+    color: $white__default;
+    @media (max-height: 500px) {
+      height: 100vh;
+    }
+    .login__content {
+      width: auto;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 10px;
+    }
+    .login__area {
+      margin-bottom: 40px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      @media (max-height: 350px) {
+        display: flex;
+      }
+    }
+    .login__header {
+      font-size: 2.5rem;
+      @media (max-height: 360px) {
+        font-size: 1.5rem;
+      }
+    }
+    .login__text {
+      line-height: 22px;
+      @media (max-height: 350px) {
+        font-size: 0.75rem;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0px 0px 5px;
+        line-height: 1;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .login__wrapperRight {
+    width: 100%;
+    display: flex;
+    grid-area: login__wrapperRight;
+    justify-content: center;
+    align-items: center;
+    background-color: $white__default;
+    height: 40vh;
+
+    @media (max-height: 900px) {
+      margin-top: 10px;
+      height: 80vh;
+    }
+
+    .newAccount__container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      margin-top: 0px;
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+      button {
+        margin-bottom: 20px;
+        width: 85vw;
+        @media (width: 768px) and (height: 1024px) {
+          width: 45vw;
+        }
+      }
+      p {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        line-height: 22px;
+        a {
+          color: $blue__area;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .newAccount__title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        @media (max-height: 425px) {
+          font-size: 1.5rem;
+        }
+        @media (width: 768px) and (height: 1024px) {
+          font-size: 2.3rem !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .login__container {
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    grid-template-columns: 2fr 1.5fr;
+    grid-template-areas:
+      "header header login__wrapperRight"
+      "login__wrapperLeft login__wrapperLeft login__wrapperRight"
+      "login__wrapperLeft login__wrapperLeft login__wrapperRight";
+    background-color: $blue__area;
+    @media (width: 1024px) and (height: 1366px) {
+      height: 20vh;
+    }
+    header {
+      grid-area: header;
+    }
+    .login__wrapperLeft {
+      min-height: 20vh;
+      display: flex;
+      grid-area: login__wrapperLeft;
+      justify-content: center;
+      align-items: center;
+      color: $white__default;
+      @media (width: 1024px) and (height: 1366px) {
+        width: 65%;
+        height: 80vh;
+      }
+
+      .login__content {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        top: 41vh;
+        @media (width: 1024px) and (height: 1366px) {
+          top: 38.5vh;
+        }
+      }
+      .login__area {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .login__header {
+        font-size: 45px;
+      }
+      .login__text {
+        line-height: 22px;
+      }
+    }
+
+    .login__wrapperRight {
+      display: flex;
+      grid-area: login__wrapperRight;
+      background-color: $white__default;
+      height: 100vh;
+      padding: 10px;
+      justify-content: center;
+      transform: scale(1.5);
+      border-radius: 50% 0 0 50%/100% 0 0 100%;
+      .newAccount__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin-left: 5px;
+        a {
+          text-decoration: none;
+        }
+        button {
+          margin-bottom: 20px;
+          width: auto;
+          padding: 0px 25px 0px 25px;
+          justify-content: center;
+          height: 32px;
+          border-radius: 6px;
+          font-size: 0.8rem;
+
+          @media (min-width: 1024px) {
+            width: 100%;
+          }
+        }
+        p {
+          margin-top: 15px;
+          margin-bottom: 15px;
+          line-height: 22px;
+          a {
+            color: $blue__area;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .newAccount__title {
+          font-size: 1.7rem;
+          margin-bottom: 20px;
+          @media (width: 1024px) and (height: 1366px) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: $breakpoint-desktop) {
+  .login__container {
+    .login__wrapperLeft {
+      clear: both;
+      width: 100%;
+      padding: 0 16px;
+      min-height: 90vh;
+    }
+    .login__content {
+      width: auto;
+      margin-top: -190px;
+    }
+    .login__wrapperRight {
+      width: 100%;
+    }
+    .newAccount__container {
+      width: auto;
+      height: auto;
+      margin-top: -240px;
+      .newAccount__title {
+        font-size: 30px;
+      }
+    }
+    button {
+      font-size: 16px;
+    }
+  }
+}
+
+.login__wrapperLeft *,
+.login__wrapperRight * {
+  font-family: "Montserrat" !important;
+}

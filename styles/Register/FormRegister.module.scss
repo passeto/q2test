@@ -1,0 +1,465 @@
+@import "../lib/variables.module";
+@import "../lib/forms.module";
+@import "../lib/buttons.module";
+
+.header{
+    background-color: $blue__area;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+.form_verification {
+    position: absolute;
+    width: 1px;
+    top: -5000px;
+    left: -5000px;
+}
+
+.form__firstStep {
+  display: block;
+  position: relative;
+}
+.password__show,
+.password__show__login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -10px;
+  > p {
+    font-size: 0.7rem;
+    margin-left: 5px;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+}
+.password__show__login {
+  margin: -25px 0 20px 0;
+}
+.form__disabled {
+  background-color: #fff;
+  position: absolute;
+  height: 510px;
+  width: 101%;
+  z-index: 10;
+  opacity: 0.7;
+}
+.form__secondStep {
+  display: block;
+}
+.form__thirdStep {
+  display: block;
+}
+.form__footerArea {
+  clear: both;
+}
+.form__container {
+  .form__containerFirstJob {
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  .form__containerExperience {
+    float: left;
+    margin-right: 10px;
+    font-size: 20px;
+    color: $blue__area;
+  }
+  .form__buttonContent {
+    margin-bottom: 30px;
+    clear: both;
+    margin-top: 100px;
+    float: left;
+    overflow: hidden;
+  }
+  .form__buttonConfirm {
+    float: right;
+    position: relative;
+    top: -8px;
+    right: -4px;
+  }
+  .form__informative {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+}
+.form__containerEdit {
+  p {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .tags__container {
+    p {
+      float: inherit;
+      font-weight: 400;
+    }
+    label {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  strong {
+    color: #404040;
+  }
+  .form__LineFull {
+    overflow: hidden;
+  }
+  label {
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    margin-bottom: 5px;
+  }
+}
+
+.form__edi {
+  background-color: rgba(53, 122, 56, 0.1);
+  padding: 20px;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  p {
+    float: left;
+    margin-right: 10px;
+  }
+  .form__LineFull,
+  .form__LineHalf {
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+}
+.form__contentEdi {
+  margin-top: 20px;
+  button {
+    font-size: 14px;
+  }
+}
+.form__grind {
+  overflow: hidden;
+  margin-bottom: 15px;
+  .form__LineFull {
+    overflow: hidden;
+  }
+  p {
+    float: left;
+    margin-bottom: 25px;
+  }
+  strong {
+    float: left;
+    margin-left: 5px;
+  }
+}
+.form__editNew {
+  margin-top: 100px;
+}
+.form__editNewModal {
+  margin-top: 30px;
+}
+
+.user__wrapper {
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+.user__picture {
+  width: 100px !important;
+  height: 100px !important;
+  border: 3px solid $blue__area;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+  @media (max-width: 600px) {
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+}
+
+.user__uploadImage {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.form__deleteContent {
+  float: left;
+  margin-top: -10px;
+}
+
+.form__wrapperLeft {
+  float: left;
+  width: 50%;
+  height: 835px;
+  transition: ease-out 0.1s;
+  padding-right: 40px;
+}
+.form__wrapperLeftCompany {
+  @extend .form__wrapperLeft;
+  height: 670px;
+}
+
+.form__wrapperRight {
+  float: left;
+  width: 50%;
+  background-color: $white__default;
+  height: 835px;
+  padding: 0 30px 35px 30px;
+  transition: ease-out 0.1s;
+}
+
+.form__wrapperRightCompany {
+  @extend .form__wrapperRight;
+  height: 670px;
+}
+
+.form__tags,
+.form__pictures {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+#tags__containerRestaurant,
+#tags__containerFood,
+#tags__containerSystem {
+  position: relative;
+}
+.tagMask {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.tags__listBox {
+  position: absolute;
+  bottom: -103px;
+  overflow-y: auto;
+  height: 133px;
+  background-color: $gray__tip;
+  opacity: 0.95;
+  z-index: 1;
+  width: 100%;
+  padding: 10px;
+  z-index: 2;
+  label {
+    padding: 10px;
+    color: $gray__markup;
+    float: left;
+    margin: 10px;
+    border-radius: 7px;
+    background-color: $gray__line;
+    cursor: pointer;
+    transition: ease 0.1s;
+    &:hover {
+      color: $gray__markup;
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.75);
+    }
+  }
+}
+
+.contraPassContainer {
+  max-width: 300px;
+  margin: 0 auto;
+  input[type="password"] {
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+  }
+}
+
+.tags__container {
+  margin-bottom: 30px;
+  input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -10000%;
+  }
+
+  p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: $gray__tip;
+  }
+  .tags__tagBox {
+    background-color: $blue__effect;
+    color: $blue__area;
+    padding: 7px 15px 7px 10px;
+    border-radius: 4px;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    i {
+      margin-right: 5px;
+      position: relative;
+      top: 2px;
+      svg {
+        color: $black__default;
+        font-size: 15px;
+      }
+    }
+  }
+}
+.form__picturesTitle {
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.formContentPictures {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  width: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
+  }
+  .user__uploadImage {
+    width: 100%;
+    float: left;
+  }
+}
+.form__picturesButton {
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+  float: left;
+  padding-top: 20px;
+  small {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+.form__picturesContainer {
+  margin: 0 auto;
+  min-height: 30vh;
+  margin-bottom: 40px;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: -webkit-fill-available;
+  @media (min-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    width: 680px;
+    flex-wrap: wrap;
+  }
+  .form__picturesEffect {
+    position: absolute;
+    top: 74px;
+    left: 20px;
+    transition: opacity 0.4s;
+    opacity: 0;
+    label {
+      margin-top: 10px;
+      float: inherit;
+      opacity: 0.85;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  li {
+    width: 200px;
+    height: 220px;
+    float: left;
+    margin: 13px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+      .form__picturesEffect {
+        opacity: 1;
+      }
+      img {
+        transform: scale(1.2);
+      }
+    }
+
+    div {
+      float: left;
+      width: 100%;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 220px;
+        transition: transform 0.8s;
+      }
+    }
+  }
+}
+
+.form__withError {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  div {
+    height: 200px;
+    max-width: 360px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    margin-top: -100px;
+  }
+  p {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.form__showArea {
+  background-color: #fff;
+  box-shadow: 0px 0px 0px 3px rgb(0 0 0 / 30%);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: $breakpoint-desktop) {
+  .form__wrapperLeftCompany {
+    clear: both;
+    width: 100%;
+    padding-right: 0px;
+    height: 790px;
+  }
+  .form__wrapperRightCompany {
+    clear: both;
+    width: 100%;
+    padding: 0;
+    .address__info {
+      button {
+        min-width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .form__tags,
+  .form__pictures {
+    width: auto;
+  }
+  .form__picturesTitle {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
