@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prepare": "husky install",
+    "prepare": "husky install && npm ci --only=production",
     "create-hook": "husky add .husky/pre-commit \"npm test\"",
     "lint": "next lint",
     "test": "jest --watch",
