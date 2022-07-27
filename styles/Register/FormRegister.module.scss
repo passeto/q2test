@@ -463,3 +463,12 @@
     line-height: 20px;
   }
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+}
+
+.circular {
+  color: $white__default;
+}

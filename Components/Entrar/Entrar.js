@@ -10,6 +10,7 @@ import MuiAlert from '@mui/material/Alert'
 import Cookies from 'js-cookie'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
+import { CircularProgress } from '@mui/material';
 import Styles from '../../styles/Register/FormRegister.module.scss'
 import { useRouter } from 'next/router'
 
@@ -17,7 +18,7 @@ import { useRouter } from 'next/router'
 export default function Entrar() {
 
   const {
-    signIn,
+    signIn, loading
   } = useAuth()
 
   const [typePassword, setTypePassword] = useState('password')
@@ -111,9 +112,18 @@ function onSubmit(data) {
                     </div>
                   )}
                 </section>
-                <button className={Styles.button__actionGreen} type="submit">
-                  Entrar
-                </button>
+                {
+                    loading ? (
+                      <div className={Styles.loading}>
+                        <CircularProgress style={{color: '#fff'}} />
+                      </div>
+                    ): ( 
+                    <button className={Styles.button__actionGreen} type="submit">
+                      Entrar
+                    </button>
+                  )
+                  }
+
               </Form>
             </Formik>
 
